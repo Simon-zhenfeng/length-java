@@ -9,7 +9,7 @@ public class Length {
 
     public Length as(String targetUnit) {
         Length result = this;
-        if (this.unit.equals(UnitEnum.f.name())) {
+        if (this.unit.equals(UnitEnum.foot.name())) {
             if (targetUnit.equals(UnitEnum.yard.name())) {
                 result = new Length(this.value / 3, targetUnit);
             } else if (targetUnit.equals(UnitEnum.inch.name())) {
@@ -20,13 +20,13 @@ public class Length {
         if (this.unit.equals(UnitEnum.yard.name())) {
             if (targetUnit.equals(UnitEnum.inch.name())) {
                 result = new Length(this.value * 36, targetUnit);
-            } else if (targetUnit.equals(UnitEnum.f.name())){
+            } else if (targetUnit.equals(UnitEnum.foot.name())){
                 result = new Length(this.value * 3, targetUnit);
             }
         }
 
         if (this.unit.equals(UnitEnum.inch.name())) {
-            if (targetUnit.equals(UnitEnum.f.name())) {
+            if (targetUnit.equals(UnitEnum.foot.name())) {
                 result = new Length(this.value / 12, targetUnit);
             } else if (targetUnit.equals(UnitEnum.yard.name())) {
                 result = new Length(this.value / 36, targetUnit);

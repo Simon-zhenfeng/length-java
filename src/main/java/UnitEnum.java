@@ -1,3 +1,7 @@
 public enum UnitEnum {
-    yard, inch,f
+    yard, inch, foot
+
+
+
+
 }
