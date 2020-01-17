@@ -9,26 +9,26 @@ public class Length {
 
     public Length as(String targetUnit) {
         Length result = this;
-        if (this.unit.equals("f")) {
-            if (targetUnit.equals("yard")) {
+        if (this.unit.equals(UnitEnum.f.name())) {
+            if (targetUnit.equals(UnitEnum.yard.name())) {
                 result = new Length(this.value / 3, targetUnit);
-            } else if (targetUnit.equals("inch")) {
+            } else if (targetUnit.equals(UnitEnum.inch.name())) {
                 result = new Length(this.value * 12, targetUnit);
             }
         }
 
-        if (this.unit.equals("yard")) {
-            if (targetUnit.equals("inch")) {
+        if (this.unit.equals(UnitEnum.yard.name())) {
+            if (targetUnit.equals(UnitEnum.inch.name())) {
                 result = new Length(this.value * 36, targetUnit);
-            } else if (targetUnit.equals("f")){
+            } else if (targetUnit.equals(UnitEnum.f.name())){
                 result = new Length(this.value * 3, targetUnit);
             }
         }
 
-        if (this.unit.equals("inch")) {
-            if (targetUnit.equals("f")) {
+        if (this.unit.equals(UnitEnum.inch.name())) {
+            if (targetUnit.equals(UnitEnum.f.name())) {
                 result = new Length(this.value / 12, targetUnit);
-            } else if (targetUnit.equals("yard")) {
+            } else if (targetUnit.equals(UnitEnum.yard.name())) {
                 result = new Length(this.value / 36, targetUnit);
             }
         }
